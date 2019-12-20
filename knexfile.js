@@ -13,15 +13,15 @@ module.exports = {
   },
 
   production: {
-    client: 'pg',
+    client: "pg",
     connection: dbConnection,
     migrations: {
-      directory: './database/migrations',
+      directory: "./database/migrations"
     },
     seeds: {
-      directory: './database/seeds',
-    },
-  }, 
+      directory: "./database/seeds"
+    }
+  },
 
   testing: {
     client: "pg",
