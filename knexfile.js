@@ -1,6 +1,6 @@
 module.exports = {
   development: {
-    client: "sqlite3",
+    client: "pg",
     connection: { filename: "./database/clients.db3" },
     useNullAsDefault: true,
     migrations: {
@@ -11,7 +11,7 @@ module.exports = {
   },
 
   testing: {
-    client: "sqlite3",
+    client: "pg",
     connection: {
       filename: "./database/test.db3"
     },
