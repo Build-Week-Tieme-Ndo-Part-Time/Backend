@@ -1,3 +1,5 @@
+const dbConnection = process.env.DATABASE_URL;
+
 module.exports = {
   development: {
     client: "pg",
@@ -8,6 +10,17 @@ module.exports = {
       tableName: "dbmigrations"
     },
     seeds: { directory: "./database/seeds" }
+  },
+
+  production: {
+    client: "pg",
+    connection: dbConnection,
+    migrations: {
+      directory: "./database/migrations"
+    },
+    seeds: {
+      directory: "./database/seeds"
+    }
   },
 
   testing: {
