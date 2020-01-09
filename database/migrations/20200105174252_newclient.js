@@ -16,7 +16,7 @@ exports.up = function(knex) {
         .notNullable()
         
     newClient
-        .integer("Loan Amount")
+        .integer("Orignal Loan Amount")
         .notNullable()
     
     newClient
@@ -24,16 +24,27 @@ exports.up = function(knex) {
         .notNullable()
 
     newClient
-        .date("Due Date")
+        .date("Loan Due Date")
+
+    newClient    
+        .integer("Amount Owed")
+        .notNullable()
+    
+    newClient
+        .integer("Harvest Goal")
+        .notNullable()
+
+    newClient
+        .integer("Harvest Amount")
+
         
-      
 
 
     
   });
 };
 
-exports.down = function(knex, Promise) {
+exports.down = function(knex) {
     return knex.schema.dropTableIfExists("newClients");
   
 };
