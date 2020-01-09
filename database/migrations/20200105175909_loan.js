@@ -1,4 +1,5 @@
 exports.up = function(knex) {
+<<<<<<< HEAD
   return knex.schema.createTable("loan", loan => {
     loan.increments();
 
@@ -12,8 +13,11 @@ exports.up = function(knex) {
 
     loan.integer("Amount Owed").notNullable();
   });
+=======
+  
+>>>>>>> 18ec2f4b0bc12126ae26fb1d14daefd551ea25b8
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableIfExistes("loan");
+  return knex.schema.dropTableIfExists("loan");
 };
