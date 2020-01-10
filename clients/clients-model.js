@@ -21,6 +21,8 @@ const add = async user => {
     .first();
 };
 
+
+
 const remove = id => {
   return db("clients")
     .where({ id })

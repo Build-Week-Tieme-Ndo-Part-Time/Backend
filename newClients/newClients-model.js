@@ -21,6 +21,13 @@ const add = async user => {
     .first();
 };
 
+function update(id, newClient) {
+  return db('newClient')
+    .where('id', Number(id))
+    .update(newClient);
+}
+
+
 const remove = id => {
   return db("newClient")
     .where({ id })
@@ -32,5 +39,6 @@ module.exports = {
   findBy,
   findById,
   add,
-  remove
+  remove,
+  update
 };
