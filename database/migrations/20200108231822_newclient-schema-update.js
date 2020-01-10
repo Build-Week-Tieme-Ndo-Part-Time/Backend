@@ -10,7 +10,7 @@ exports.up = function(knex) {
 
     newClient.integer("Orignal Loan Amount").notNullable();
 
-    newClient.datetime("Loan Initiation Date").notNullable();
+    newClient.string("Loan Initiation Date", 255).notNullable();
 
     newClient.date("Loan Due Date");
 
