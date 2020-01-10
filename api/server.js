@@ -18,7 +18,7 @@ server.use(express.json());
 
 server.use("/api/auth", authRouter);
 server.use("/api/clients", authenticate, usersRouter);
-server.use("/newClients", newClientsRouter);
+server.use("/newClients", authenticate, newClientsRouter);
 
 server.get("/", (req, res) => {
   res.status(200).json({ api: "up" });
